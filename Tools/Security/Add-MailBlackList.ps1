@@ -1,7 +1,6 @@
 Import-Module ExchangeOnline
 
 $Credential = Get-Credential
-
 Connect-ExchangeOnline -UserPrincipalName '' -Credential $UserCredential
 
 # Define the client ID and secret for authentication with the Microsoft Graph API
