@@ -1,6 +1,6 @@
 using module "./src/models/ConnectionHandler.psm1"
 
-Write-Verbose 'A carregar as funções públicas'
+Write-Verbose 'Loading functions'
 . $PSScriptRoot\Get-OneDriveInfo.ps1
 . $PSScriptRoot\Get-SPOInfo.ps1
 . $PSScriptRoot\Invoke-LargeItemUpload.ps1
