@@ -11,4 +11,4 @@ function Get-SPOInfo {
     $url = "https://graph.microsoft.com/v1.0/sites/$($CompanySharepoint):/sites/$sitename"
   
     Invoke-RestMethod -UseBasicParsing -Headers $headers -Uri $url -Method Get -Verbose
-  } # Get-SPOInfo
+  }

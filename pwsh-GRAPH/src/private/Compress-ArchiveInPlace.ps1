@@ -22,4 +22,4 @@ function Compress-ArchiveInPlace {
     }
     end {
     }
-} # Compress-ArchiveInPlace
+}

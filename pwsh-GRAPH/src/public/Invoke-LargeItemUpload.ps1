@@ -16,4 +16,4 @@ function Invoke-LargeItemUpload {
     }
     $response = Invoke-RestMethod -Method 'Put' -Uri $UploadSession.uploadUrl -Body $fileInBytes -Headers $headers
     # return $response
-  } # Invoke-LargeItemUpload
+  }
