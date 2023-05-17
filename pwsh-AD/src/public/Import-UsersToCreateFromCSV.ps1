@@ -52,4 +52,4 @@ This will prompt the user to select a CSV file using a Windows Forms dialog. If 
         # Use powershell's import-csv to prettify and import to current shell
         return (Import-Csv $filePath)
     }
-} # Import-UsersToCreateFromCSV
+}

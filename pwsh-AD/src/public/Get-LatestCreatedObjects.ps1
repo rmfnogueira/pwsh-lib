@@ -11,8 +11,8 @@ function Get-LatestCreatedObjects {
     PROCESS {
         $select_properties = 'SamAccountName', 'WhenCreated', 'MemberOf', 'Title', 'Enabled'
         $params = @{
-            Filter      = { WhenCreated -ge $timestamp }
-            Properties  = $select_properties
+            Filter     = { WhenCreated -ge $timestamp }
+            Properties = $select_properties
         }
         Get-ADObject @params 
     }

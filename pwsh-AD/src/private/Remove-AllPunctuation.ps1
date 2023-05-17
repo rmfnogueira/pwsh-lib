@@ -1,4 +1,4 @@
-﻿function Edit-AllPunctuation {
+﻿function Remove-AllPunctuation {
     <#
 .SYNOPSIS
 Edit-AllPunctuation replaces accented characters and special characters in a string with its equivalent non-accented character.
@@ -102,4 +102,4 @@ Replaces accented characters and special characters in a string.
         }
     }#process
     END {}
-}#Edit-AllPunctuation
+}

@@ -32,4 +32,4 @@ function Test-ADComputerNamingRules {
     END {
         Write-Verbose "[END]: $($MyInvocation.MyCommand)"
     }
- } #Test-ADComputerNamingRules
+ }

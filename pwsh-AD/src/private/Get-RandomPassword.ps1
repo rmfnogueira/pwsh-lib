@@ -17,4 +17,4 @@ Get-RandomPassword
         Get-Random -Count 8 | 
         Foreach-Object { [char]$_ })
     ConvertTo-SecureString -AsPlainText -Force $password
-} # Get-RandomPassword
+}
