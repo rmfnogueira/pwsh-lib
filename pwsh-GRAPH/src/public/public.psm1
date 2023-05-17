@@ -1,4 +1,4 @@
-using module 'C:\dev\pwsh-edu-graph\src\models\ConnectionHandler.psm1'
+using module "$PSScriptRoot\\pwsh-Graph\src\models\ConnectionHandler.psm1"
 
 Write-Verbose 'A carregar as funções públicas'
 . $PSScriptRoot\Get-OneDriveInfo.ps1

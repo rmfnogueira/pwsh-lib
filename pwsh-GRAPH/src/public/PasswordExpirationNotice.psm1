@@ -26,7 +26,7 @@ function Get-AllMSGUsers {
     }
     process {
         try {
-            $usersEndpoint = "https://graph.microsoft.com/v1.0/users?$count=true&$filter=proxyAddresses/any (p:endsWith(p, 'edu.azores.gov.pt'))&$select=id,displayName,proxyaddresses,mail"
+            $usersEndpoint = "https://graph.microsoft.com/v1.0/users?$count=true&$filter=proxyAddresses/any (p:endsWith(p, 'contoso.com'))&$select=id,displayName,proxyaddresses,mail"
             $usersResponse = Invoke-RestMethod -Method Get -Uri $usersEndpoint -Headers $headers -ErrorAction Stop
             $users = $usersResponse.value
         }

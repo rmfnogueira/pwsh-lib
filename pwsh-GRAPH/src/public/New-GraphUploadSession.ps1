@@ -18,5 +18,5 @@ function New-GraphUploadSession {
     $upload_session = "https://graph.microsoft.com/v1.0/drives/$Document_drive_ID/root:/ADUsers/$($Filename):/createUploadSession"
     
     Invoke-RestMethod -Uri $upload_session -Headers $headers -Method Post
-  } # New-GraphUploadSession
+  }
   
