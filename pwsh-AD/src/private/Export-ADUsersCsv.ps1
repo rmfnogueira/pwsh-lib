@@ -1,5 +1,4 @@
 function Export-ADUsersCsv {
-    # Exportar Alunos,Docentes e Funcionarios atuais para ficheiro CSV.
     [CmdletBinding()]
     param (
         [Parameter()]
@@ -34,4 +33,4 @@ function Export-ADUsersCsv {
     end {
         Write-Verbose "[ENDING] $($timestamp): Getting ADUsers"
     }   
-} #Export-ADUsersCsv
+}

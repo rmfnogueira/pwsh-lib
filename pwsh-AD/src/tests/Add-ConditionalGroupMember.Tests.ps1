@@ -1,5 +1,5 @@
 BeforeAll {
-    Import-Module "$PSScriptRoot/../pwsh-edu-ad.psm1" -Force # -verbose
+    Import-Module "$PSScriptRoot/../pwsh-AD.psm1" -Force # -verbose
 }
 
 Describe 'Add-ConditionalGroupMember' {

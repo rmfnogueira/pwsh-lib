@@ -1,5 +1,5 @@
 function New-ADLogon {
-<#
+    <#
 .SYNOPSIS
  New-ADLogon: Generates SamAccountName, UserPrincipalName, EmailAddress, Title, DisplayName, Name, GivenName, Surname, Initials, NIF, and Office values from an input object array
     
@@ -28,7 +28,7 @@ function New-ADLogon {
     #>
     [CmdletBinding()]
     param (
-        [Parameter(ValueFromPipeline,ValueFromPipelineByPropertyName)]
+        [Parameter(ValueFromPipeline, ValueFromPipelineByPropertyName)]
         [Object[]]$InputObject,
         [string]$DomainFQDN = 'edu.azores.gov.pt'
     )
@@ -72,23 +72,23 @@ function New-ADLogon {
             $UserPrincipalName = "$SamAccountName@$DomainFQDN"
                
             [PSCustomObject]@{
-                'SamAccountName'        = $SamAccountName
-                'UserPrincipalName'     = $UserPrincipalName
-                'EmailAddress'          = $EmailAddress
-                'Title'                 = $Obj.Title
-                'DisplayName'           = $DisplayName
-                'Name'                  = $Name
-                'GivenName'             = $GivenName
-                'Surname'               = $SurName
-                'Initials'              = $FirstInitial + $LastInitial
-                'EmployeeType'          = $NIF
-                'ExtensionAttribute1'   = $NIF
-                'NIF'                   = $NIF
-                'Office'            = $($Obj.Escritorio)
+                'SamAccountName'      = $SamAccountName
+                'UserPrincipalName'   = $UserPrincipalName
+                'EmailAddress'        = $EmailAddress
+                'Title'               = $Obj.Title
+                'DisplayName'         = $DisplayName
+                'Name'                = $Name
+                'GivenName'           = $GivenName
+                'Surname'             = $SurName
+                'Initials'            = $FirstInitial + $LastInitial
+                'EmployeeType'        = $NIF
+                'ExtensionAttribute1' = $NIF
+                'NIF'                 = $NIF
+                'Office'              = $($Obj.Escritorio)
             }
         }
     }
     end {
         Write-Verbose "[end]:   ending $($MyInvocation.MyCommand)"
     }
-} #New-ADLOGON
+}

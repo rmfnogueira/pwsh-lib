@@ -1,4 +1,6 @@
-function LinkGpobyState ([string]$ou_path, [string[]]$ou_names ) {
+function LinkGpobyState (
+    [string]$ou_path, 
+    [string[]]$ou_names ) {
     $ous = Get-ADOrganizationalUnit -Filter * -SearchBase $ou_path -SearchScope OneLevel
     foreach ($ou in $ous) {
         switch -regex ($ou.State) {

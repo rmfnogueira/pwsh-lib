@@ -1,7 +1,3 @@
-<#
-Adiciona um objecto, criado num periodo de tempo, a um grupo active directory, perante condição predefenida.
-O match para adicao é feito pelo DistinguishedName,dado que todos os objetos devem estar na localização correta na AD (ou alternativamente membro de grupo especifico)
-#>
 function Add-ConditionalGroupMember {
     [CmdletBinding()]
     param (
@@ -53,4 +49,4 @@ function Add-ConditionalGroupMember {
     } END {
         Write-Verbose "[END]: $($MyInvocation.MyCommand)"
     }
-} # Add-ConditionalGroupMember
+}

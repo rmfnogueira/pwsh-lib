@@ -1,5 +1,5 @@
 BeforeAll {
-    Import-Module "$PSScriptRoot/../PSScriptTools.psm1" -Force # -verbose
+    Import-Module "$PSScriptRoot/../pwsh-AD.psm1" -Force # -verbose
 }
 Describe 'Set-CustomAttributes' {
     It ' ' {}

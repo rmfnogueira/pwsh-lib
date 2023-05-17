@@ -1,7 +1,7 @@
-function Copy-AdCsvExport {
+function Copy-ADCsvExport {
     [CmdletBinding()]
     param (
-        $computername
+        $Computername
     )
     begin {
         Write-Verbose "[BEGIN] Starting $($MyInvocation.MyCommand)"

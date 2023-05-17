@@ -17,14 +17,14 @@ function Set-CustomAttributes {
         Set-LogPath
     }
     PROCESS {
-        $Users = $Objects | Where-Object {$_.ObjectClass -eq 'user'}
+        $Users = $Objects | Where-Object { $_.ObjectClass -eq 'user' }
         foreach ($user in $Users) {
             try {
                 if (($user.DistinguishedName -match 'name-to-check') -or ($user.DistinguishedName -match 'name-to-check')) {
                     Write-Verbose "[PROCESS] Setting $AttributeValue on $user.SamAccountName" 
-                    Set-ADUser $user.SamAccountName -Replace @{"$($Attribute)" = "$($AttributeValue)"}
+                    Set-ADUser $user.SamAccountName -Replace @{"$($Attribute)" = "$($AttributeValue)" }
                 }
-             }
+            }
             catch {
                 throw $_ | Tee-Object -Append -FilePath "$($LogPath)\$($MyInvocation.MyCommand).txt"
             }
@@ -33,4 +33,4 @@ function Set-CustomAttributes {
     END {
         Write-Verbose "[END]: $($MyInvocation.MyCommand)"
     }
-} #Set-CustomAttributes
+}

@@ -6,27 +6,27 @@ function Get-ADUserbyOU {
             ValueFromPipeline,
             ValueFromPipelinebyPropertyName)]
         [ValidateNotNullorEmpty()]
-        [string[]]$searchbase
-        )
+        [string[]]$Searchbase
+    )
     begin {
         Write-Verbose "[begin]  Starting $($MyInvocation.MyCommand)"
 
         $selected_properties =
-            'CN',
-            'DistinguishedName',
-            'EmployeeType',
-            'Enabled',
-            'GivenName',
-            'Mail',
-            'Name',
-            'ObjectClass',
-            'ObjectGUID',
-            'SamAccountName',
-            'SID',
-            'Surname',
-            'UserPrincipalName',
-            'WhenChanged',
-            'WhenCreated'
+        'CN',
+        'DistinguishedName',
+        'EmployeeType',
+        'Enabled',
+        'GivenName',
+        'Mail',
+        'Name',
+        'ObjectClass',
+        'ObjectGUID',
+        'SamAccountName',
+        'SID',
+        'Surname',
+        'UserPrincipalName',
+        'WhenChanged',
+        'WhenCreated'
 
         $params = @{
             'Filter'     = '*'
@@ -39,5 +39,5 @@ function Get-ADUserbyOU {
             Get-ADUser @params -SearchBase $ou
         }
     }
-    end {Write-Verbose "[end]:  ending $($MyInvocation.MyCommand)"} 
-}#Get-ADUserbyOU
+    end { Write-Verbose "[end]:  ending $($MyInvocation.MyCommand)" } 
+}

@@ -33,4 +33,4 @@ function Move-ADObjectOU {
     } END {
         Write-Verbose "[END]: $($MyInvocation.MyCommand)"
     }
-} #Move-ADObjectOU
+}

@@ -1,5 +1,5 @@
 function Get-RandomPassword {
-<#
+    <#
 .SYNOPSIS
 Get-RandomPassword generates a random 8-char password using numbers, uppercase letters, lowercase letters, and special characters.
 
@@ -14,7 +14,7 @@ Get-RandomPassword
 #>
 
     $password = -join (48..57 + 65..90 + 97..122 + 33..47 + 58..64 + 91..96 + 123..126 | 
-    Get-Random -Count 8 | 
-    Foreach-Object {[char]$_})
+        Get-Random -Count 8 | 
+        Foreach-Object { [char]$_ })
     ConvertTo-SecureString -AsPlainText -Force $password
 } # Get-RandomPassword

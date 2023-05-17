@@ -13,5 +13,5 @@ function Update-SrcVMs {
     ForEach ($session in $Sessions) {
         Write-Verbose "Updating source code on VM $session.ComputerName"
         Copy-Item -Force -Recurse -Path $LocalPath -ToSession $session -Destination $defaultModulePath -Exclude "$localpath\.git\*"
-        }
+    }
 } #Update-SrcVMs

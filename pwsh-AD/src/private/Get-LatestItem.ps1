@@ -9,4 +9,4 @@ function Get-LatestItem {
     Where-Object Name -like "$name*" | 
     Sort-Object -Property LastWriteTime -Descending |
     Select-Object -First 1
-} # Get-LatestItem
+}

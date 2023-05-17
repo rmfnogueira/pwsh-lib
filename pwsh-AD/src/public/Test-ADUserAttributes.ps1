@@ -1,7 +1,7 @@
 function Test-ADUserAttributes {
     [CmdletBinding()]
     param (
-        [Parameter(ValueFromPipeline,ValueFromPipelineByPropertyName)]
+        [Parameter(ValueFromPipeline, ValueFromPipelineByPropertyName)]
         [psobject[]]$InputObject
     )
     begin {

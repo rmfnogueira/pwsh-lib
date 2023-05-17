@@ -1,5 +1,5 @@
 function Import-UsersToCreateFromCSV {
-<#
+    <#
 .SYNOPSIS
 The Import-UsersToCreateFromCSV function uses a Windows Forms dialog to select a CSV file for importing. The function opens the CSV file using a stream reader, replaces semicolons with commas in each line, and then writes the modified lines back to the file. The function then imports the modified CSV file using the Import-Csv cmdlet.
 

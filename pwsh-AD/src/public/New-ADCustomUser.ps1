@@ -8,7 +8,8 @@ function New-ADCustomUser {
         New-ADLogon |
         Test-ADUserAttributes -ErrorAction Stop |
         New-ADCustomUser
-    } catch {
+    }
+    catch {
         $_    
     }
 }
