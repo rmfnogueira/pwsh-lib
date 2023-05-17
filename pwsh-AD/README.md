@@ -1,4 +1,4 @@
-## PWSH-EDU-AD
+## PWSH-AD
 
 > **Powershell ActiveDirectory custom module to automate and facilitate recurring tasks in a large enterprise environment.**
 
@@ -26,8 +26,8 @@
 
 ```powershell
 Register-ScheduledJob 
- -Name 'Set-EduUserLicense' 
- -ScriptBlock {Import-Module pwsh-edu; Set-EduUserLicense} 
+ -Name 'Set-ADUserLicense' 
+ -ScriptBlock {Import-Module pwsh-AD; Set-EduUserLicense} 
  -Trigger (New-JobTrigger 
  -Once -At "15/03/2022 15:00pm" 
  -RepetitionInterval (New-TimeSpan -Minutes 15) 
@@ -42,8 +42,8 @@ Register-ScheduledJob
 ### **Update Scheduled Job Definition (using Job Id 5):**
 ```powershell
 Get-ScheduledJob -Id 5 | 
-Set-ScheduledJob -Name Test-NomenclaturaPCsEDU  -ScriptBlock {
+Set-ScheduledJob -Name Test-ADComputerNaming  -ScriptBlock {
     Import-Module C:\dev\pwsh-edu\pwsh-edu.psm1;
-    Test-NomenclaturaPCsEDU
+    Test-ADComputerNaming
 }
 ```
